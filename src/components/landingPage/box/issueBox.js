@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
+import {Link} from 'react-router-dom';
 
 class Box extends Component {
   state = {
@@ -39,7 +40,8 @@ class Box extends Component {
             lists.map((list, index) => {
               const { title, assignee, created_at, number } = list;
               return (
-                <div className="Item_Card " key={index}>
+                <Link to={"/issuepage/"+ number }>
+                <div className="Item_Card" key={index.toString()+number.toString()}>
                   <p className="Item">
                     <span className="Item_Value">{title}</span>
                   </p>
@@ -53,6 +55,7 @@ class Box extends Component {
                     <span className="Item_Value">{number}</span>
                   </p>
                 </div>
+                </Link>
               );
             })
           ) : (
