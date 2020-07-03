@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
-import {Link} from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 class Box extends Component {
   state = {
@@ -35,33 +35,31 @@ class Box extends Component {
     const { isLoading, lists } = this.state;
     return (
       <div className="Item">
-        <div>
-          {!isLoading ? (
-            lists.map((list, index) => {
-              const { title, assignee, created_at, number } = list;
-              return (
-                <Link to={"/issuepage/"+ number }>
-                <div className="Item_Card" key={index.toString()+number.toString()}>
-                  <p className="Item">
-                    <span className="Item_Value">{title}</span>
-                  </p>
-                  <p className="Item">
-                    <span className="Item_Value">{assignee}</span>
-                  </p>
-                  <p className="Item">
-                    <span className="Item_Value">{created_at}</span>
-                  </p>
-                  <p className="Item">
-                    <span className="Item_Value">{number}</span>
-                  </p>
+        <span className="row">
+          <span className="col-xs-3">Issue </span>
+          <span className="col-xs-9">title</span>
+          <span className="col-xs-3">assignee</span>
+        </span>
+        {!isLoading ? (
+          lists.map((list, index) => {
+            const { title, assignee, created_at, number } = list;
+            return (
+              <div key={index.toString() + number.toString()}>
+                <div className="Item">
+                  <Link to={"/issuepage/" + number}>
+                    <span className="row">
+                      <span className="col-xs-3">{number}</span>
+                      <span className="col-xs-9">{title}</span>
+                      <span className="col-xs-3">{assignee}</span>
+                    </span>
+                  </Link>
                 </div>
-                </Link>
-              );
-            })
-          ) : (
-            <p>Loading...</p>
-          )}
-        </div>
+              </div>
+            );
+          })
+        ) : (
+          <p>Loading...</p>
+        )}
       </div>
     );
   }

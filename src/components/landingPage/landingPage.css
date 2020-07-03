@@ -1,0 +1,41 @@
+.Item_Card {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+
+  margin-left: 20px;
+  margin-right: 20px;
+  padding: 10px;
+  overflow: hidden;
+}
+
+.Item {
+  flex-direction: row;
+  justify-content: space-evenly;
+  box-shadow: 2px 4px 10px 0 #d3d3d3;
+  margin: 20px;
+}
+
+.Item a {
+  text-decoration: none;
+}
+
+.col-xs-9 {
+  justify-items: auto;
+  width: 75%;
+  padding: 0 5px;
+  float: right;
+  text-align: left;
+}
+.col-xs-3 {
+  width: 10%;
+  float: left;
+  padding: 0 15px;
+}
+
+.row {
+  display: flex;
+  width: 100%;
+  clear: both;
+  overflow: auto;
+}

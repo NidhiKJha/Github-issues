@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import NavBar from "./nav";
 import Footer from "./footer";
-import Box from "./box/issueBox";
+import Box from "./issueBox";
+import "./landingPage.css" ;
 
 class LandingPage extends Component {
   render() {

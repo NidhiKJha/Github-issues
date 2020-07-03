@@ -11,6 +11,7 @@ function App() {
         <Switch>
           <Route exact path="/" component={LandingPage} />
           <Route exact path="/issuepage/:number" component={IssuePage}/>
+         
         </Switch>
       </div>
     </Router>
