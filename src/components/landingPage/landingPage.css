@@ -2,7 +2,6 @@
   display: flex;
   flex-direction: column;
   background-color: white;
-
   margin-left: 20px;
   margin-right: 20px;
   padding: 10px;
@@ -35,7 +34,13 @@
 
 .row {
   display: flex;
-  width: 100%;
-  clear: both;
-  overflow: auto;
+  overflow: hidden;
+  box-shadow: 2px 2px 2px 0 #d3d3d3;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding: 10px;
+}
+
+.header{
+  margin-top: 20px!important; 
 }

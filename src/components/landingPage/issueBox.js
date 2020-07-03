@@ -35,26 +35,26 @@ class Box extends Component {
     const { isLoading, lists } = this.state;
     return (
       <div className="Item">
-        <span className="row">
-          <span className="col-xs-3">Issue </span>
-          <span className="col-xs-9">title</span>
-          <span className="col-xs-3">assignee</span>
-        </span>
+        <div className="header">
+          <span className="row">
+            <span className="col-xs-3">Issue </span>
+            <span className="col-xs-9">title</span>
+            <span className="col-xs-3">assignee</span>
+          </span>
+        </div>
         {!isLoading ? (
           lists.map((list, index) => {
             const { title, assignee, created_at, number } = list;
             return (
-              <div key={index.toString() + number.toString()}>
-                <div className="Item">
-                  <Link to={"/issuepage/" + number}>
-                    <span className="row">
-                      <span className="col-xs-3">{number}</span>
-                      <span className="col-xs-9">{title}</span>
-                      <span className="col-xs-3">{assignee}</span>
-                    </span>
-                  </Link>
-                </div>
-              </div>
+              <span className="Item" key={index.toString() + number.toString()}>
+                <Link to={"/issuepage/" + number}>
+                  <span className="row">
+                    <span className="col-xs-3">{number}</span>
+                    <span className="col-xs-9">{title}</span>
+                    <span className="col-xs-3">{assignee}</span>
+                  </span>
+                </Link>
+              </span>
             );
           })
         ) : (
