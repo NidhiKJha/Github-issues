@@ -5,16 +5,24 @@ import LandingPage from "./components/landingPage/page";
 import IssuePage from "./components/issuePage/index";
 
 function App() {
+  const [darkTheme, setDarkTheme] = React.useState(true);
   return (
-    <Router>
-      <div className="App">
-        <Switch>
-          <Route exact path="/" component={LandingPage} />
-          <Route exact path="/issuepage/:number" component={IssuePage}/>
-         
-        </Switch>
-      </div>
-    </Router>
+    <div className={darkTheme ? "dark-theme" : "light-theme"}>
+      <nav>
+        <button onClick={() => setDarkTheme((prevTheme) => !prevTheme)}>
+          {darkTheme ? "Light" : "Dark"}
+        </button>
+      </nav>
+
+      <Router>
+        <div className="App">
+          <Switch>
+            <Route exact path="/" component={LandingPage} />
+            <Route exact path="/issuepage/:number" component={IssuePage} />
+          </Switch>
+        </div>
+      </Router>
+    </div>
   );
 }
 

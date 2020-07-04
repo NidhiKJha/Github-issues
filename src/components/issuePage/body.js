@@ -1,27 +1,31 @@
 import React, { Component } from "react";
 import axios from "axios";
-import {Link} from 'react-router-dom';
 
-class Body extends Component {
-    constructor(props) {
-        super(props)
-    
-        this.state = {
-          data: null,
-          Number: this.props.match.params.number
-        }
-  };
+class IssueBody extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      issue_list: [],
+      isLoading: true,
+      data: null,
+      Numb: this.props.Number,
+    };
+  }
 
   // Now we're going to make a request for data using axios
   getIssues() {
     axios
       //   // This is where the data is hosted
-      .get("https://api.github.com/repos/facebook/react/issues/" + this.state.Number)
+      .get(
+        "https://api.github.com/repos/facebook/react/issues/" +
+          this.state.Numb 
+      )
       //   // Once we get a response and store data, let's change the loading state
       .then((response) => {
         console.log({ response });
         this.setState({
-          lists: response.data,
+          issue_list: response.data,
           isLoading: false,
         });
       })
@@ -35,15 +39,22 @@ class Body extends Component {
 
   // Putting that data to use
   render() {
-   
+    const { issue_list } = this.state;
     return (
       <div className="Item">
-        <div>
-         Hi
-        </div>
+        {issue_list.map((list, index) => {
+          const { body } = list;
+          return (
+            <span className="Item" key={index.toString()}>
+              <span className="row">
+                <span className="col-xs-3">{body}</span>
+              </span>
+            </span>
+          );
+        })}
       </div>
     );
   }
 }
 
-export default Body;
+export default IssueBody;

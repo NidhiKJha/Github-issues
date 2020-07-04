@@ -2,19 +2,32 @@ import React, { Component } from "react";
 import NavBar from "./nav";
 import Footer from "./footer";
 import Box from "./issueBox";
-import "./landingPage.css" ;
+import Search from "./search";
+import "./landingPage.css";
 
 class LandingPage extends Component {
+  constructor() {
+    super();
+    this.state = {
+      user_repo: "",
+    };
+  }
+
+  setSearchQuery(query) {
+    this.setState({
+      user_repo: query,
+    });
+  }
+
   render() {
     return (
       <div>
         <div>
           <NavBar />
         </div>
-        <div>Search</div>
+        <Search setSearchQuery={(query) => this.setSearchQuery(query)} />
         <div>
-          {" "}Hi
-          <Box />{" "}
+          <Box user_repo={this.state.user_repo} />
         </div>
         <div>
           <Footer />

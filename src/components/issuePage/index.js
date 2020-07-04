@@ -1,23 +1,27 @@
 import React, { Component } from "react";
 import axios from "axios";
 import Comment from "./comment";
-import {Link} from 'react-router-dom';
+import IssueBody from "./body";
+import { Link } from "react-router-dom";
 
 class IssuePage extends Component {
-    constructor(props) {
-        super(props)
-    
-        this.state = {
-          data: null,
-          Number: this.props.match.params.number
-        }
-  };
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      data: null,
+      Number: this.props.match.params.number,
+    };
+  }
 
   // Now we're going to make a request for data using axios
   getIssues() {
     axios
       //   // This is where the data is hosted
-      .get("https://api.github.com/repos/facebook/react/issues/" + this.state.Number)
+      .get(
+        "https://api.github.com/repos/facebook/react/issues/" +
+          this.state.Number
+      )
       //   // Once we get a response and store data, let's change the loading state
       .then((response) => {
         console.log({ response });
@@ -36,11 +40,11 @@ class IssuePage extends Component {
 
   // Putting that data to use
   render() {
-   
     return (
       <div className="Item">
         <div>
-         <Comment Number={this.state.Number} />
+          <Comment Number={this.state.Number} />
+          <IssueBody Number={this.state.Number} />
         </div>
       </div>
     );
