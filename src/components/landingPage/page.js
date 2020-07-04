@@ -1,6 +1,4 @@
 import React, { Component } from "react";
-import NavBar from "./nav";
-import Footer from "./footer";
 import Box from "./issueBox";
 import Search from "./search";
 import "./landingPage.css";
@@ -22,15 +20,14 @@ class LandingPage extends Component {
   render() {
     return (
       <div>
-        <div>
-          <NavBar />
+        <div
+          id="form_class"
+          style={{ textAlign: "center", alignItems: "center" }}
+        >
+          <Search setSearchQuery={(query) => this.setSearchQuery(query)} />
         </div>
-        <Search setSearchQuery={(query) => this.setSearchQuery(query)} />
         <div>
           <Box user_repo={this.state.user_repo} />
-        </div>
-        <div>
-          <Footer />
         </div>
       </div>
     );

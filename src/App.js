@@ -4,13 +4,16 @@ import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
 import LandingPage from "./components/landingPage/page";
 import IssuePage from "./components/issuePage/index";
 
+import NavBar from "./components/nav";
+
 function App() {
-  const [darkTheme, setDarkTheme] = React.useState(true);
+  const [darkTheme, setDarkTheme] = React.useState(false);
   return (
     <div className={darkTheme ? "dark-theme" : "light-theme"}>
       <nav>
+        <NavBar/>
         <button onClick={() => setDarkTheme((prevTheme) => !prevTheme)}>
-          {darkTheme ? "Light" : "Dark"}
+          {darkTheme ? "Light Theme" : "Dark Theme"}
         </button>
       </nav>
 

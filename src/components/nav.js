@@ -2,8 +2,8 @@ import React from "react";
 
 function NavBar() {
   return (
-    <div className="Nav">
-      <span className="about-text">About</span>
+    <div className="nav">
+      <span className="about-text">Github Issues App</span>
     </div>
   );
 }

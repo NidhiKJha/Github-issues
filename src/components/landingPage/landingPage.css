@@ -27,6 +27,11 @@
   float: left;
   padding: 0 15px;
 }
+.col-xs-1 {
+  width: 10%;
+  float: left;
+  padding: 0 15px;
+}
 
 .row {
   display: flex;
@@ -41,13 +46,32 @@
   font-size: 20px !important;
   font-weight: 600;
   text-transform: capitalize;
+  background-color: #503d81;
+  color: #f8f8f8;
 }
 
 .form {
+  width: 100%;
+  margin-top: 32px;
+  margin-bottom: 20px;
+}
+.input_field {
+  height: 70px;
+  width: 100%;
+  position: relative;
+}
+
+.user_repo {
+  width: 100% !important;
+}
+
+.about-text {
   margin: 20px;
-  align-items: center;
-  border: 3px solid #00b4cc;
-  overflow: hidden;
+  margin-bottom: 10px !important;
+}
+
+.legend {
+  text-align: center;
 }
 
 @media screen and (max-width: 500px) {
@@ -59,3 +83,8 @@
     display: none;
   }
 }
+
+@media screen and (max-width: 800px) {
+  .col-xs-3 {
+    display: none;
+  }}
