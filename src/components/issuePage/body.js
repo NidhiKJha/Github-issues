@@ -17,6 +17,7 @@ class IssueBody extends Component {
         </div>
         <div className="row">
         <div id="issue_body">
+          <h1>Description</h1>
           <ReactMarkdown source={issue_data.body} />
         </div>
         </div>
