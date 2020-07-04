@@ -2,7 +2,6 @@
 
 This project is a replica of github issues page in react.
 
-
 ## To Run The App
 
 Use command:
@@ -16,7 +15,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 1. React JS
 2. CSS
-4. React-Router
+3. React-Router
 
 ## Functionalities Added:
 
@@ -28,4 +27,3 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 ## Further Improvements
 
 1. Adding React-Redux
-

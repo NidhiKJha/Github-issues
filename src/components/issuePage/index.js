@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import Comment from './comment';
 import IssueBody from './body';
-import "./issue.css" ;
+import './issue.css';
 
 class IssuePage extends Component {
     constructor(props) {

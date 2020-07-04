@@ -12,27 +12,25 @@ class Comment extends Component {
         };
     }
 
-    // Now we're going to make a request for data using axios
     getIssues(number) {
         axios
-            // This is where the data is hosted
+
             .get(`https://api.github.com/repos/facebook/react/issues/${number}/comments`)
-            // Once we get a response and store data, let's change the loading state
+
             .then((response) => {
                 this.setState({
                     comments_list: response.data,
                     isLoading: false
                 });
             })
-            // If we catch any errors connecting, let's update accordingly
+
             .catch((error) => this.setState({ error, isLoading: false }));
     }
-    // Let's our app know we're ready to render the data
+
     componentDidMount() {
         this.getIssues(this.props.number);
     }
 
-    // Putting that data to use
     render() {
         const { comments_list } = this.state;
 
@@ -44,7 +42,7 @@ class Comment extends Component {
             <div className="issue_comments">
                 {comments_list.map((comment) => {
                     return (
-                        <div className= "comment_one" key={comment.id}>
+                        <div className="comment_one" key={comment.id}>
                             <div>Comment by {comment.author_association}</div>
                             <ReactMarkdown id="issue_comment_body" source={comment.body} />
                         </div>

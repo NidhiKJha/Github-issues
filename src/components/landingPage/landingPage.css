@@ -1,90 +1,105 @@
 .Item {
-  flex-direction: row;
-  justify-content: space-evenly;
-  box-shadow: 2px 4px 10px 0 #d3d3d3;
-  margin: 20px;
+    flex-direction: row;
+    justify-content: space-evenly;
+    box-shadow: 2px 4px 10px 0 #d3d3d3;
+    margin: 20px;
 }
 
 .Item a {
-  text-decoration: none;
+    text-decoration: none;
 }
 
 .col-xs-9 {
-  justify-items: auto;
-  width: 60%;
-  padding: 0 5px;
-  float: right;
-  text-align: left;
+    justify-items: auto;
+    width: 60%;
+    padding: 0 5px;
+    float: right;
+    text-align: left;
 }
 .col-xs-3 {
-  width: 10%;
-  float: left;
-  padding: 0 15px;
+    width: 10%;
+    float: left;
+    padding: 0 15px;
 }
 
 .col-xs-2 {
-  width: 10%;
-  float: left;
-  padding: 0 15px;
+    width: 10%;
+    float: left;
+    padding: 0 15px;
 }
 .col-xs-1 {
-  width: 10%;
-  float: left;
-  padding: 0 15px;
+    width: 10%;
+    float: left;
+    padding: 0 15px;
 }
 
 .row {
-  display: flex;
-  overflow: hidden;
-  border-bottom: 2px solid #d3d3d3;
-  margin-left: 20px;
-  margin-right: 20px;
-  padding: 10px;
+    display: flex;
+    overflow: hidden;
+    border-bottom: 2px solid #d3d3d3;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 10px;
 }
 
 .header {
-  font-size: 20px !important;
-  font-weight: 600;
-  text-transform: capitalize;
-  background-color: #503d81;
-  color: #f8f8f8;
+    font-size: 20px !important;
+    font-weight: 600;
+    text-transform: capitalize;
+    background-color: #503d81;
+    color: #f8f8f8;
 }
 
 .form {
-  width: 100%;
-  margin-top: 32px;
-  margin-bottom: 20px;
+    width: 100%;
+    margin-top: 32px;
+    margin-bottom: 20px;
 }
 .input_field {
-  height: 70px;
-  width: 100%;
-  position: relative;
+    height: 70px;
+    width: 100%;
+    position: relative;
 }
 
 .user_repo {
-  width: 100% !important;
+    width: 100% !important;
 }
 
 .about-text {
-  margin: 20px;
-  margin-bottom: 10px !important;
+    margin: 20px;
+    margin-bottom: 10px !important;
 }
 
 .legend {
-  text-align: center;
+    text-align: center;
+}
+
+.pagination {
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+#pagination_button {
+    color: white;
+    font-size: 16px;
+    background-color: #503d81;
+    width: 120px;
+    height: 30px;
 }
 
 @media screen and (max-width: 500px) {
-  .col-xs-9 {
-    width: 50%;
-    margin-left: 20px;
-  }
-  .col-xs-2 {
-    display: none;
-  }
+    .col-xs-9 {
+        width: 50%;
+        margin-left: 20px;
+    }
+    .col-xs-2 {
+        display: none;
+    }
 }
 
 @media screen and (max-width: 800px) {
-  .col-xs-3 {
-    display: none;
-  }}
+    .col-xs-3 {
+        display: none;
+    }
+}

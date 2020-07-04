@@ -1,25 +1,63 @@
 #issue_title {
-  padding: 20px;
-  margin: 20px;
-  border: 2px solid #503d81;
-  font-size: 20px;
-  font-weight: 600;
+    padding: 20px;
+    margin: 20px;
+    border: 2px solid #503d81;
+    font-size: 20px;
+    font-weight: 600;
 }
 
 #issue_body {
-  width: 80%;
-  padding: 0 5px;
-  padding-top: 20px !important;
-  float: right;
-  text-align: left;
-  overflow: hidden;
-  box-shadow: 2px 4px 10px 0 #d3d3d3;
+    width: 70%;
+    padding: 0 5px;
+    padding-top: 20px !important;
+    float: right;
+    text-align: left;
+    overflow: hidden;
+    box-shadow: 2px 4px 10px 0 #d3d3d3;
+}
+
+#assignee_box {
+    width: 25%;
+    margin-left: 30px;
+    padding: 0 5px;
+    padding-top: 20px !important;
+    overflow: hidden;
+    box-shadow: 2px 4px 10px 0 #d3d3d3;
+}
+
+.assignee_title {
+    font-size: 16px;
+    font-weight: 600;
 }
 
 .comment_one {
-  padding: 0 5px;
-  padding-top: 20px !important;
-  border: 2px solid #503d81;
-  margin: 20px;
-  margin-bottom: 60px!important;
+    padding: 0 5px;
+    padding-top: 20px !important;
+    border: 2px solid #503d81;
+    margin: 20px;
+    margin-bottom: 60px !important;
+}
+
+#mobile_assignee_box {
+    padding: 0 5px;
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
+    border: 2px solid #503d81;
+    margin: 20px;
+    margin-bottom: 60px !important;
+}
+
+@media screen and (max-width: 800px) {
+    #assignee_box {
+        display: none;
+    }
+    #issue_body {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    #mobile_assignee_box {
+        display: none;
+    }
 }
