@@ -60,20 +60,29 @@ class Box extends Component {
             <span className="col-xs-1">Issue </span>
             <span className="col-xs-9">title</span>
             <span className="col-xs-2">Author</span>
-            <span className="col-xs-3">Comments</span>
+            <span className="col-xs-3">Comment</span>
           </span>
         </div>
 
         {issue_list.map((list, index) => {
-          const { title, comments, number, user } = list;
+          const { title, comments, state, number, user } = list;
           return (
             <span className="Item" key={index.toString() + number.toString()}>
               <Link to={"/issuepage/" + number}>
                 <span className="row">
-                  <span className="col-xs-1">{number}</span>
+                  <span className="col-xs-1">
+                    {number}
+                   {/* <span style={{ color: state = "open" ? 'red' : 'green' }}>{state}</span> */}
+                  </span>
                   <span className="col-xs-9">{title}</span>
                   <span className="col-xs-2">{user.login}</span>
-                  <span className="col-xs-3">{comments}</span>
+                  <span className="col-xs-3">
+                    <i className="fa fa-comment-o" aria-hidden="true">
+                      {" "}
+                      {""}
+                      {comments}
+                    </i>
+                  </span>
                 </span>
               </Link>
             </span>

@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import ReactMarkdown from "react-markdown";
+import "./issue.css"
 
 class IssueBody extends Component {
   // constructor(props) {
@@ -14,8 +15,10 @@ class IssueBody extends Component {
         <div id="issue_title">
           {issue_data.title}
         </div>
+        <div className="row">
         <div id="issue_body">
           <ReactMarkdown source={issue_data.body} />
+        </div>
         </div>
       </div>
     );

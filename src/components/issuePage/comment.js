@@ -44,7 +44,7 @@ class Comment extends Component {
             <div className="issue_comments">
                 {comments_list.map((comment) => {
                     return (
-                        <div key={comment.id}>
+                        <div className= "comment_one" key={comment.id}>
                             <div>Comment by {comment.author_association}</div>
                             <ReactMarkdown id="issue_comment_body" source={comment.body} />
                         </div>

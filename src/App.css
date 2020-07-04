@@ -1,6 +1,6 @@
 .App {
   margin-top: 20px;
-  width: 100%
+  width: 100%;
 }
 
 nav {
@@ -8,9 +8,9 @@ nav {
   background-color: #503d81;
   width: 100%;
   padding: 20px;
-  padding-left: 0px!important;
+  padding-left: 0px !important;
   color: #f8f8f8;
-  padding-right: 0px!important;
+  padding-right: 0px !important;
 }
 
 .light-theme {
@@ -36,4 +36,16 @@ nav {
 
 .dark-theme .header {
   background-color: #363c48;
+}
+
+.dark-theme #issue_body {
+  box-shadow: 2px 4px 10px 0 #d3d3d3;
+}
+
+.dark-theme #issue_title {
+  border: 2px solid #d3d3d3;
+}
+
+.dark-theme .comment_one {
+  border: 2px solid #d3d3d3;
 }
