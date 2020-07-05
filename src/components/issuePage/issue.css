@@ -32,7 +32,7 @@
 
 .comment_one {
     padding: 0 5px;
-    width: 100%;
+    width: auto;
     padding-top: 20px !important;
     border: 2px solid #503d81;
     margin: 20px;
@@ -44,7 +44,7 @@
     padding: 0 5px;
     padding-top: 20px !important;
     padding-bottom: 20px !important;
-    border: 2px solid #503d81;
+    border: 2px solid #d3d3d3;
     margin: 20px;
     margin-bottom: 60px !important;
 }
