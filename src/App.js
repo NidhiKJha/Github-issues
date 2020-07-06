@@ -21,7 +21,7 @@ function App() {
                 <div className="App">
                     <Switch>
                         <Route exact path="/" component={LandingPage} />
-                        <Route exact path="/issuepage/:number" component={IssuePage} />
+                        <Route path="/issuepage/:github_user/:repo/:number" component={IssuePage} />
                     </Switch>
                 </div>
             </Router>

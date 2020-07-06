@@ -12,10 +12,10 @@ class Comment extends Component {
         };
     }
 
-    getIssues(number) {
+    getIssues(github_user, repo, number) {
         axios
 
-            .get(`https://api.github.com/repos/facebook/react/issues/${number}/comments`)
+            .get(`https://api.github.com/repos/${github_user}/${repo}/issues/${number}/comments`)
 
             .then((response) => {
                 this.setState({
@@ -28,7 +28,7 @@ class Comment extends Component {
     }
 
     componentDidMount() {
-        this.getIssues(this.props.number);
+        this.getIssues(this.props.github_user, this.props.repo, this.props.number);
     }
 
     render() {
@@ -43,7 +43,12 @@ class Comment extends Component {
                 {comments_list.map((comment) => {
                     return (
                         <div className="comment_one" key={comment.id}>
-                            <div>Comment by {comment.author_association}</div>
+                            <div className="commentor">
+                                Comment by{' '}
+                                <a href={`https://github.com/${comment.user.login}`}>
+                                    {comment.user.login}
+                                </a>
+                            </div>
                             <ReactMarkdown id="issue_comment_body" source={comment.body} />
                         </div>
                     );

@@ -22,8 +22,8 @@ nav {
     color: #f8f8f8;
 }
 
-.dark-theme .Item a {
-    color: beige;
+.dark-theme a {
+    color: #ffa7c4;
 }
 
 .light-theme .Item a {

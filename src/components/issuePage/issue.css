@@ -12,8 +12,20 @@
     padding-top: 20px !important;
     float: right;
     text-align: left;
-    overflow: hidden;
+    overflow: scroll;
     box-shadow: 2px 4px 10px 0 #d3d3d3;
+}
+
+#issue_body img {
+    width: 100%;
+}
+
+.comment_one pre {
+    overflow: scroll !important;
+}
+
+.commentor {
+    font-weight: 600;
 }
 
 #assignee_box {
@@ -54,6 +66,9 @@
         display: none;
     }
     #issue_body {
+        width: 100%;
+    }
+    .comment_one img {
         width: 100%;
     }
 }
