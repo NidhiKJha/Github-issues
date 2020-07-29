@@ -5,7 +5,6 @@ import './issue.css';
 class IssueBody extends Component {
     render() {
         const { issue_data } = this.props;
-        // console.log(issue_data);
         return (
             <div className="issue_page">
                 <div id="issue_title">{issue_data.title}</div>
